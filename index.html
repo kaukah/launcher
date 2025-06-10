@@ -5,364 +5,674 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shortcut Aplikasi</title>
     <style>
-      body {
-        margin: 0;
-        font-family: sans-serif;
-        background: #f7f7f7;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-      }
-      h1 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-        gap: 16px;
-        width: 100%;
-        max-width: 600px;
-      }
-      .app-icon {
-        text-align: center;
-        text-decoration: none;
-        color: #222;
-        padding: 10px;
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.1s ease;
-      }
-      .app-icon:hover {
-        transform: scale(1.05);
-      }
-      .app-icon img {
-        width: 48px;
-        height: 48px;
-      }
-      .app-icon span {
-        display: block;
-        margin-top: 8px;
-        font-size: 13px;
-      }
-    </style>
+ body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  place-items: center;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: transform 0.1s ease;
+}
+
+.app-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.app-label {
+  margin-top: 6px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+
+
+  button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  button:disabled {
+    background: #888;
+    cursor: not-allowed;
+  }
+</style>
   </head>
   <body>
     <div class="grid">
+      
+      <div class="app-container">
+        <a class="app-icon" href="https://wa.me/6289664433885" target="_blank">
+          <img
+            src="https://img.icons8.com/color/96/whatsapp--v1.png"
+            alt="WhatsApp"
+          />
+        </a>
+        <span class="app-label">WhatsApp</span>
+      </div>
 
-      <a class="app-icon" href="https://wa.me/6289664433885" target="_blank">
-        <img
-          src="https://img.icons8.com/color/96/whatsapp--v1.png"
-          alt="WhatsApp"
-        />
-        <span>WhatsApp</span>
-      </a>
-      <a
-        class="app-icon"
-        href="https://shopee.co.id/universal-link"
-        target="_blank"
-      >
-        <img
-          src="https://i.pinimg.com/474x/52/6e/71/526e7194884d4a9141dbd637d89b202b.jpg"
-          alt="Shopee"
-        />
-        <span>Shopee</span>
-      </a>
 
-      <a class="app-icon" href="tiktok://home" target="_blank">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF7-ogAuKbx4wIvdpEiRcFcv1zwAhMI8hZgawZuXM4BAOEOO0Bp-l8CF8AUwPANDPUveM&usqp=CAU"
-          alt="Tokopedia"
-        />
-        <span>Tiktok</span>
-      </a>
+      <div class="app-container">
+        <a class="app-icon" href="tiktok://home" target="_blank">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF7-ogAuKbx4wIvdpEiRcFcv1zwAhMI8hZgawZuXM4BAOEOO0Bp-l8CF8AUwPANDPUveM&usqp=CAU"
+            alt="Tokopedia"
+          />
+        </a>
+        <span class="app-label">Tiktok</span>
+      </div>
 
-      <a class="app-icon" href="https://google.com" target="_blank">
-        <img
-          src="https://cdn.iconscout.com/icon/free/png-256/free-google-logo-icon-download-in-svg-png-gif-file-formats--brands-pack-logos-icons-189824.png?f=webp&w=256"
-          alt="Maps"
-        />
-        <span>Google</span>
-      </a>
 
-      <a class="app-icon" href="geo:0,0?q=SPBU" target="_blank">
-        <img src="https://img.icons8.com/color/96/google-maps.png" alt="Maps" />
-        <span>Maps</span>
-      </a>
+      <div class="app-container">
+        <a class="app-icon" href="geo:0,0" target="_blank">
+          <img src="https://img.icons8.com/color/96/google-maps.png" alt="Maps" />
+        </a>
+        <span class="app-label">Maps</span>
+      </div>
 
-      <a
-        class="app-icon"
-        href="https://calculatorend.glitch.me/"
-        target="_blank"
-      >
-        <img
-          src="https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/512/Calculator_512.png"
-        />
-        <span>Calculator</span>
-      </a>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://calculatorend.glitch.me/"
+          target="_blank"
+        >
+          <img
+            src="https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/512/Calculator_512.png"
+          />
+        </a>
+        <span class="app-label">Calculator</span>
+      </div>
 
-      <a
-        class="app-icon"
-        href="https://docs.google.com/spreadsheets/d/1VTyow5eg-kMIB9XhqajobPCiynYzD-DWlXxWZLCteDU/"
-        target="_blank"
-      >
-        <img
-          src="https://img.icons8.com/color/96/google-sheets.png"
-          alt="Sheets"
-        />
-        <span>Todolist</span>
-      </a>
+      
+      <div class="app-container">
+  <div class="app-icon" onclick="document.getElementById('cameraInput').click();">
+    <img src="https://cdn.iconscout.com/icon/free/png-256/free-apple-camera-icon-download-in-svg-png-gif-file-formats--logo-apps-pack-user-interface-icons-493147.png?f=webp&w=256" />
+  </div>
+  <span class="app-label">Camera</span>
+</div>
 
-      <a
-        class="app-icon"
-        href="https://docs.google.com/spreadsheets/d/1YMK8SJH6ytmdoauQEkTmzOQP-RZqjC8IVddRu4AwJ8s"
-        target="_blank"
-      >
-        <img
-          src="https://img.icons8.com/color/96/google-sheets.png"
-          alt="Sheets"
-        />
-        <span>Stok Barang</span>
-      </a>
+      
+      
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/spreadsheets/d/1VTyow5eg-kMIB9XhqajobPCiynYzD-DWlXxWZLCteDU/"
+          target="_blank"
+        >
+          <img
+            src="https://img.icons8.com/color/96/google-sheets.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Todolist</span>
+      </div>
 
-      <a
-        class="app-icon"
-        href="https://docs.google.com/document/d/1GGTdAKtuYsFbZKYmSH8Wmj_nGBzYWZsDRrt8ua56ZxY/"
-        target="_blank"
-      >
-        <img
-          src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"
-          alt="Sheets"
-        />
-        <span>Basyair</span>
-      </a>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/spreadsheets/d/1YMK8SJH6ytmdoauQEkTmzOQP-RZqjC8IVddRu4AwJ8s"
+          target="_blank"
+        >
+          <img
+            src="https://img.icons8.com/color/96/google-sheets.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Stok</span>
+      </div>
 
-      <a
-        class="app-icon"
-        href="fb://facewebmodal/f?href=https://facebook.com"
-        target="_blank"
-      >
-        <img
-          src="https://img.icons8.com/color/96/facebook.png"
-          alt="Facebook"
-        />
-        <span>Facebook</span>
-      </a>
-      <a
-        class="app-icon"
-        target="_blank"
-        href="intent:#Intent;package=id.co.bankbkemobile.digitalbank;end"
-      >
-        <img
-          src="https://play-lh.googleusercontent.com/ZGLrjk0PKIj2L4DaWiKmhAf0f6cBXml6eHgjRpJhQ4XQpGvw4T5d4hjl_EQF5jY9Vked"
-        />
-        <span>Seabank</span>
-      </a>
-      <a
-        class="app-icon"
-        target="_blank"
-        href="intent:#Intent;package=com.jago.digitalBanking;end"
-      >
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdSOQuZy051eP6Q189GXUWb_kkgLJX-QsBvg&s"
-        />
-        <span>Jago</span>
-      </a>
+            <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/spreadsheets/"
+          target="_blank"
+        >
+          <img
+            src="https://img.icons8.com/color/96/google-sheets.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Sheet</span>
+      </div>
+      
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/document/d/1GGTdAKtuYsFbZKYmSH8Wmj_nGBzYWZsDRrt8ua56ZxY/"
+          target="_blank"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Basyair</span>
+      </div>
 
-      <a
-        class="app-icon"
-        href="intent://instagram.com/#Intent;package=com.instagram.android;scheme=https;end"
-        target="_blank"
-      >
-        <img
-          src="https://cdn-icons-png.freepik.com/256/15713/15713420.png?semt=ais_hybrid"
-          alt="Instagram"
-        />
-        <span>Instagram</span>
-      </a>
-      <a
-        class="app-icon"
-        target="_blank"
-        href="intent:#Intent;package=com.ertunga.wifihotspot;end"
-      >
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwy6niEzmx6LGoOY5sqBeLu2-H8CzEWVAjRA&s"
-        />
-        <span>Hotspot</span>
-      </a>
-      <a
-        class="app-icon"
-        target="_blank"
-        href="intent:#Intent;package=com.tom.bluetoothDevicesWidget;end"
-      >
-        <img src="https://cdn-icons-png.flaticon.com/256/9173/9173887.png" />
-        <span>Bluetooth</span>
-      </a>
+      
+           <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/document/d/1tJyhS_3wQqBty9jmENwYCktFThCq0sost7wFODut-SA"
+          target="_blank"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Assyamsi</span>
+      </div>
 
-      <a
-        class="app-icon"
-        target="_blank"
-        href="intent:#Intent;package=com.google.android.apps.nbu.files;end"
-      >
-        <img
-          src="https://img.utdstc.com/icon/97b/3a3/97b3a3d5a3faa0aa906b1e91b73655521fb392d8ceef56b52dce05dc235b9e87:200"
-        />
-        <span>File Google</span>
-      </a>
-      <a
-        class="app-icon"
-        target="_blank"
-        href="intent:#Intent;package=pl.solidexplorer2;end"
-      >
-        <img
-          src="https://img.utdstc.com/icon/97b/3a3/97b3a3d5a3faa0aa906b1e91b73655521fb392d8ceef56b52dce05dc235b9e87:200"
-        />
-        <span>File Solid</span>
-      </a>
+      
+   
+       <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="intent:#Intent;package=id.bmri.livin;end"
+        >
+          <img
+            src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1421830205/f6ivbwssd63k3rngurng.png"
+          />
+        </a>
+        <span class="app-label">Mandiri</span>
+      </div>
+      
+            <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="intent:#Intent;package=com.bankbsi.mobile;end"
+        >
+          <img
+            src="https://play-lh.googleusercontent.com/37LouKJTsdX7DS28yN9LymTRIMmct9OATRPJrravKoSYKOCd6S6G3obfX_HQPm0pr54"
+          />
+        </a>
+        <span class="app-label">BSI</span>
+      </div>
+      
+      
+      <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="intent:#Intent;package=id.co.bankbkemobile.digitalbank;end"
+        >
+          <img
+            src="https://play-lh.googleusercontent.com/ZGLrjk0PKIj2L4DaWiKmhAf0f6cBXml6eHgjRpJhQ4XQpGvw4T5d4hjl_EQF5jY9Vked"
+          />
+        </a>
+        <span class="app-label">Seabank</span>
+      </div>
+      
+      <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="intent:#Intent;package=com.jago.digitalBanking;end"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdSOQuZy051eP6Q189GXUWb_kkgLJX-QsBvg&s"
+          />
+        </a>
+        <span class="app-label">Jago</span>
+      </div>
+   <div class="app-container">
+        <a
+          class="app-icon"
+          href="fb://facewebmodal/f?href=https://facebook.com"
+          target="_blank"
+        >
+          <img
+            src="https://img.icons8.com/color/96/facebook.png"
+            alt="Facebook"
+          />
+        </a>
+        <span class="app-label">Facebook</span>
+      </div>
+      
+      
+            <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://shopee.co.id/universal-link"
+          target="_blank"
+        >
+          <img
+            src="https://i.pinimg.com/474x/52/6e/71/526e7194884d4a9141dbd637d89b202b.jpg"
+            alt="Shopee"
+          />
+        </a>
+        <span class="app-label">Shopee</span>
+      </div>
+      
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="intent://instagram.com/#Intent;package=com.instagram.android;scheme=https;end"
+          target="_blank"
+        >
+          <img
+            src="https://cdn-icons-png.freepik.com/256/15713/15713420.png?semt=ais_hybrid"
+            alt="Instagram"
+          />
+        </a>
+        <span class="app-label">Instagram</span>
+      </div>
+      
+   
+      
+      <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="intent:#Intent;package=com.ertunga.wifihotspot;end"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwy6niEzmx6LGoOY5sqBeLu2-H8CzEWVAjRA&s"
+          />
+        </a>
+        <span class="app-label">Hotspot</span>
+      </div>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="intent:#Intent;package=com.tom.bluetoothDevicesWidget;end"
+        >
+          <img src="https://cdn-icons-png.flaticon.com/256/9173/9173887.png" />
+        </a>
+        <span class="app-label">Bluetooth</span>
+      </div>
 
-      <a
-        class="app-icon"
-        target="_blank"
-        href="intent:#Intent;package=org.localsend.localsend_app;end"
-      >
-        <img
-          src="https://play-lh.googleusercontent.com/t2xwoWAJPoIHZlYiw82J31fZl40kj962j5DVHohn-Pgn7ZiuoXCl-2_NMyMERa7cCFw=w240-h480-rw"
-        />
-        <span>LocalSend</span>
-      </a>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="intent:#Intent;package=com.google.android.apps.nbu.files;end"
+        >
+          <img
+            src="https://img.utdstc.com/icon/97b/3a3/97b3a3d5a3faa0aa906b1e91b73655521fb392d8ceef56b52dce05dc235b9e87:200"
+          />
+        </a>
+        <span class="app-label">File</span>
+      </div>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="intent:#Intent;package=pl.solidexplorer2;end"
+        >
+          <img
+            src="https://img.utdstc.com/icon/97b/3a3/97b3a3d5a3faa0aa906b1e91b73655521fb392d8ceef56b52dce05dc235b9e87:200"
+          />
+        </a>
+        <span class="app-label">File Solid</span>
+      </div>
 
-      <a
-        class="app-icon"
-        target="_blank"
-        href="intent:#Intent;package=com.kai.kaiticketing;end"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/id/e/ea/KAI_Access_logo.png"
-        />
-        <span>Kereta</span>
-      </a>
-      <a class="app-icon" href="gojek://home" target="_blank">
-        <img
-          src="https://console.kr-asia.com/wp-content/uploads/2019/07/gojek-new-logo-300x300.jpg"
-          alt="Gojek"
-        />
-        <span>Gojek</span>
-      </a>
-      <a class="app-icon" href="https://food.grab.com/id/id/" target="_blank">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNw3afWUB7EBtsevXb5CxwxWO6wsSts1DbHg&s"
-          alt="Gojek"
-        />
-        <span>Grab</span>
-      </a>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="intent:#Intent;package=org.localsend.localsend_app;end"
+        >
+          <img
+            src="https://play-lh.googleusercontent.com/t2xwoWAJPoIHZlYiw82J31fZl40kj962j5DVHohn-Pgn7ZiuoXCl-2_NMyMERa7cCFw=w240-h480-rw"
+          />
+        </a>
+        <span class="app-label">LocalSend</span>
+      </div>
 
-      <a class="app-icon" href="vnd.youtube://" target="_blank">
-        <img
-          src="https://img.icons8.com/color/96/youtube-play.png"
-          alt="YouTube"
-        />
-        <span>YouTube</span>
-      </a>
-      <a class="app-icon" href="https://keep.google.com" target="_blank">
-        <img
-          src="https://img.icons8.com/color/96/google-keep.png"
-          alt="Google Keep"
-        />
-        <span>Google Keep</span>
-      </a>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="intent:#Intent;package=com.kai.kaiticketing;end"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/id/e/ea/KAI_Access_logo.png"
+          />
+        </a>
+        <span class="app-label">Kereta</span>
+      </div>
+      <div class="app-container">
+        <a class="app-icon" href="gojek://home" target="_blank">
+          <img
+            src="https://console.kr-asia.com/wp-content/uploads/2019/07/gojek-new-logo-300x300.jpg"
+            alt="Gojek"
+          />
+        </a>
+        <span class="app-label">Gojek</span>
+      </div>
+      <div class="app-container">
+        <a class="app-icon" href="https://food.grab.com/id/id/" target="_blank">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNw3afWUB7EBtsevXb5CxwxWO6wsSts1DbHg&s"
+            alt="Gojek"
+          />
+        </a>
+        <span class="app-label">Grab</span>
+      </div>
 
-      <a class="app-icon" href="mailto:" target="_blank">
-        <img src="https://img.icons8.com/color/96/gmail--v1.png" alt="Gmail" />
-        <span>Gmail</span>
-      </a>
+      <div class="app-container">
+        <a class="app-icon" href="vnd.youtube://" target="_blank">
+          <img
+            src="https://img.icons8.com/color/96/youtube-play.png"
+            alt="YouTube"
+          />
+        </a>
+        <span class="app-label">YouTube</span>
+      </div>
+      <div class="app-container">
+        <a class="app-icon" href="https://keep.google.com" target="_blank">
+          <img
+            src="https://img.icons8.com/color/96/google-keep.png"
+            alt="Google Keep"
+          />
+        </a>
+        <span class="app-label">Keep</span>
+      </div>
+   
+      <div class="app-container">
+        <a class="app-icon" href="intent:#Intent;package=com.irpulsa.android;end" target="_blank">
+          <img
+            src="https://media.licdn.com/dms/image/v2/C4E03AQFS_EfgaNf9-Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1613572708228?e=2147483647&v=beta&t=HL7XUC8YEd_8fIUL_zBFzWqH_QsAeQTYSr18-QNODa4"
+            alt="Maps"
+          />
+        </a>
+        <span class="app-label">Pulsa</span>
+      </div>
+      <div class="app-container">
+        <a class="app-icon" href="mailto:" target="_blank">
+          <img src="https://img.icons8.com/color/96/gmail--v1.png" alt="Gmail" />
+        </a>
+        <span class="app-label">Gmail</span>
+      </div>
 
-      <a class="app-icon" href="https://chat.openai.com" target="_blank">
-        <img src="https://img.icons8.com/color/96/chatgpt.png" alt="ChatGPT" />
-        <span>ChatGPT</span>
-      </a>
+      <div class="app-container">
+        <a class="app-icon" href="https://chatgpt.com/c/6838f13b-f38c-8006-8999-08639a7c336d" target="_blank">
+          <img src="https://img.icons8.com/color/96/chatgpt.png" alt="ChatGPT" />
+        </a>
+        <span class="app-label">ChatGPT</span>
+      </div>
 
-      <a class="app-icon" href="spotify://" target="_blank">
-        <img
-          src="https://img.icons8.com/color/96/spotify--v1.png"
-          alt="Spotify"
-        />
-        <span>Spotify</span>
-      </a>
-      <a
-        class="app-icon"
-        href="intent:#Intent;action=android.intent.action.VIEW;type=*/*;end"
-        target="_blank"
-      >
-        <img
-          src="https://cdn.iconscout.com/icon/free/png-256/free-apple-photos-icon-download-in-svg-png-gif-file-formats--logo-photo-apps-pack-user-interface-icons-493155.png?f=webp"
-          alt="Files"
-        />
-        <span>Galery</span>
-      </a>
+      <div class="app-container">
+        <a class="app-icon" href="spotify://" target="_blank">
+          <img
+            src="https://img.icons8.com/color/96/spotify--v1.png"
+            alt="Spotify"
+          />
+        </a>
+        <span class="app-label">Spotify</span>
+      </div>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="intent:#Intent;action=android.intent.action.VIEW;type=*/*;end"
+          target="_blank"
+        >
+          <img
+            src="https://cdn.iconscout.com/icon/free/png-256/free-apple-photos-icon-download-in-svg-png-gif-file-formats--logo-photo-apps-pack-user-interface-icons-493155.png?f=webp"
+            alt="Files"
+          />
+        </a>
+        <span class="app-label">Galery</span>
+      </div>
 
-      <a
-        class="app-icon"
-        href="intent://send/6281234567890#Intent;package=com.whatsapp.w4b;scheme=smsto;end"
-        target="_blank"
-      >
-        <img
-          src="https://ipa.ameer.app/storage/A43BE4FB4ADC9EBSQP/18364/512x512bb.jpg"
-          alt="WA Business"
-        />
-        <span>WA Business</span>
-      </a>
-      <a class="app-icon" href="tg://resolve" target="_blank">
-        <img
-          src="https://img.icons8.com/color/96/telegram-app.png"
-          alt="Telegram"
-        />
-        <span>Telegram</span>
-      </a>
-      <a
-        class="app-icon"
-        target="_blank"
-        href="https://www.facebook.com/messages/"
-      >
-        <img
-          src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-messenger-logo-icon-download-in-svg-png-gif-file-formats--logos-icons-2416656.png?f=webp"
-        />
-        <span>Messenger</span>
-      </a>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://seller-id.tokopedia.com/finance/withdraw-new"
+          target="_blank"
+        >
+          <img
+            src="https://play-lh.googleusercontent.com/9BAU1OAepIm0_XRy41TN9wbAsQAAeLC185leXpURQLAhqfsFH3a6vfaZxzE8ud7ez6c=w256"
+            alt="Tiktokshop"
+          />
+        </a>
+        <span class="app-label">Tiktokshop</span>
+      
+      </div>
+      
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="intent://send/6281234567890#Intent;package=com.whatsapp.w4b;scheme=smsto;end"
+          target="_blank"
+        >
+          <img
+            src="https://ipa.ameer.app/storage/A43BE4FB4ADC9EBSQP/18364/512x512bb.jpg"
+            alt="WA Business"
+          />
+        </a>
+        <span class="app-label">Whatsapp</span>
+        
+        
+      </div>
+      <div class="app-container">
+        <a class="app-icon" href="tg://resolve" target="_blank">
+          <img
+            src="https://img.icons8.com/color/96/telegram-app.png"
+            alt="Telegram"
+          />
+        </a>
+        <span class="app-label">Telegram</span>
+      </div>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="https://www.facebook.com/messages/"
+        >
+          <img
+            src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-messenger-logo-icon-download-in-svg-png-gif-file-formats--logos-icons-2416656.png?f=webp"
+          />
+        </a>
+        <span class="app-label">Messenger</span>
+      </div>
 
-      <a
-        class="app-icon"
-        href="intent:#Intent;package=com.ashaquavision.status.saver.downloader;end"
-        target="_blank"
-      >
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2BOfCHRrIEHn1DDhiD_2Ek0SdkvnYxaGnTA&s"
-        />
-        <span>Status Saver</span></a
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="intent:#Intent;package=com.ashaquavision.status.saver.downloader;end"
+          target="_blank"
+        >
+          <img
+            src="https://e7.pngegg.com/pngimages/665/353/png-clipart-swagger-application-programming-interface-representational-state-transfer-openapi-specification-logo-whatsapp-status-cartoon-logo-grass-thumbnail.png"
+          />
+        </a>
+        <span class="app-label">Status</span></div
       >
 
-      <a
-        class="app-icon"
-        target="_blank"
-        href="https://calendar.google.com"
-      >
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX9XgKT1QiXbXe0u5DxEtvxQDj4TH-i9lUyA&s"
-        />
-        <span>Calendar</span>
-      </a>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          target="_blank"
+          href="https://calendar.google.com"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX9XgKT1QiXbXe0u5DxEtvxQDj4TH-i9lUyA&s"
+          />
+        </a>
+        <span class="app-label">Calendar</span>
+      </div>
 
-      <a
-        class="app-icon"
-        href="https://www.bigseller.com/web/order/index.htm?status=processing"
-        target="_blank"
-      >
-        <img
-          src="https://lh3.googleusercontent.com/mlo9waKZQyP_wzXDke8IgwwKr2VRB_UxOD1x6ajojr225cFVwaS7yBZG01w9n4yXdsyYy1LekooUAjU_mvVmT4wZ=s128-rj-sc0x00ffffff"
-        />
-        <span>Bigseller</span>
-      </a>
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://www.bigseller.com/web/order/index.htm?status=processing"
+          target="_blank"
+        >
+          <img
+            src="https://lh3.googleusercontent.com/mlo9waKZQyP_wzXDke8IgwwKr2VRB_UxOD1x6ajojr225cFVwaS7yBZG01w9n4yXdsyYy1LekooUAjU_mvVmT4wZ=s128-rj-sc0x00ffffff"
+          />
+        </a>
+        <span class="app-label">Bigseller</span>
+      </div>
+        
+              <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://www.tasbih.org/"
+          target="_blank"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-7m2fremUbLzJCrtnHqxbDiPZ38bjVdxXag&s"
+          />
+        </a>
+        <span class="app-label">Tasbih</span>
+      </div>
+        
+        
+              <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://www.online-stopwatch.com/sensory-timers/circle/full-screen/#"
+          target="_blank"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdMRLUZ2g0EwdSpjXmLZDY_X2OHYj30jCsMw&s"
+          />
+        </a>
+        <span class="app-label">Timer</span>
+      </div>
+      
+    
+             <div class="app-container">
+        <a
+          class="app-icon"
+          href="    https://docs.google.com/spreadsheets/d/1TMSoixoLG4gasRmWjleN5Q94WYxFHXW1dibCXBsXh5c/edit?gid=0#gid=0"
+          target="_blank"
+        >
+          <img
+            src="https://cdn.glitch.global/03e6a85d-c0f8-4b7b-8830-9670b80d0c85/184fa8e8-9e76-42fc-b59a-d0b37052f335.image.png?v=1749369903084"
+          />
+        </a>
+        <span class="app-label">Ngaji</span>
+      </div>
+      
+             <div class="app-container">
+        <a
+          class="app-icon"
+          href="    https://canva.com"
+          target="_blank"
+        >
+          <img
+            src="https://play-lh.googleusercontent.com/3aWGqSf3T_p3F6wc8FFvcZcnjWlxpZdNaqFVEvPwQ1gTOPkVoZwq6cYvfK9eCkwCXbRY=s256-rw"
+          />
+        </a>
+        <span class="app-label">Canva</span>
+      </div>
+      
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="    https://lastpass.com"
+          target="_blank"
+        >
+          <img
+            src="https://images.icon-icons.com/2699/PNG/512/lastpass_tile_logo_icon_168330.png"
+          />
+        </a>
+        <span class="app-label">Last</span>
+      </div>
+    
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="intent:#Intent;package=com.macrovideo.v380pro;end"
+          target="_blank"
+        >
+          <img
+            src="https://img.utdstc.com/icon/417/850/4178509fc47218027c4c2956237e9f0b7e0b72346ffc62c1dc961ff88b344c19:200"
+          />
+        </a>
+        <span class="app-label">CCTV</span></div
+      >      
+      
+
+      
+
+ 
+
+<!-- Input tersembunyi -->
+<input
+  type="file"
+  id="cameraInput"
+  accept="image/*"
+  capture="environment"
+  style="display: none;"
+/>
+<script>
+  const input = document.getElementById('cameraInput');
+  let currentBlobUrl = null;
+
+  input.addEventListener('change', () => {
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+
+      if (currentBlobUrl) {
+        URL.revokeObjectURL(currentBlobUrl);
+      }
+
+      currentBlobUrl = URL.createObjectURL(file);
+
+      // Auto-download
+      const a = document.createElement('a');
+      a.href = currentBlobUrl;
+      a.download = file.name || 'foto.jpg';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+  });
+</script>     
+      
+      
+      
     </div>
   </body>
 </html>
