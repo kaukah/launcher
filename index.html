@@ -7,6 +7,8 @@
     <style>
  body {
   margin: 0;
+     margin-top: 70px; /* sesuaikan dengan tinggi quote-container */
+
   font-family: sans-serif;
   background: #000;
   display: flex;
@@ -23,13 +25,15 @@ h1 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+  gap: 6px;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   place-items: center;
+  margin-top:30px;
 }
+
 
 .app-container {
   display: flex;
@@ -41,11 +45,11 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
+  width: 55px;
+  height: 55px;
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  /*box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);*/
   text-decoration: none;
   transition: transform 0.1s ease;
 }
@@ -78,21 +82,64 @@ h1 {
     background: #888;
     cursor: not-allowed;
   }
+    
+
+ .quote-container {
+  position: fixed;
+   margin-bottom:300px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  z-index: 9999;
+  padding: 10px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+  .quote-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: #8fce00;
+    animation: progressBar 5s linear infinite;
+  }
+
+  @keyframes progressBar {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+
+  .quote-box {
+    font-size: 18px;
+    font-style: bold;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    padding: 10px 30px;
+    border-radius: 4px;
+    /*box-shadow: 0 2px 6px rgba(0,0,0,0.1);*/
+  }
+
+
 </style>
   </head>
   <body>
+    
+
+    
+    <div class="quote-container">
+  <div class="quote-progress"></div>
+  <div id="quote-box" class="quote-box">Alhamdulillah 🤲</div>
+</div>
+
+    
+    
     <div class="grid">
       
-      <div class="app-container">
-        <a class="app-icon" href="https://wa.me/6289664433885" target="_blank">
-          <img
-            src="https://img.icons8.com/color/96/whatsapp--v1.png"
-            alt="WhatsApp"
-          />
-        </a>
-        <span class="app-label">WhatsApp</span>
-      </div>
-
+     
+      
 
       <div class="app-container">
         <a class="app-icon" href="tiktok://home" target="_blank">
@@ -133,7 +180,32 @@ h1 {
   <span class="app-label">Camera</span>
 </div>
 
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="intent:#Intent;package=com.macrovideo.v380pro;end"
+          target="_blank"
+        >
+          <img
+            src="https://img.utdstc.com/icon/417/850/4178509fc47218027c4c2956237e9f0b7e0b72346ffc62c1dc961ff88b344c19:200"
+          />
+        </a>
+        <span class="app-label">CCTV</span></div
+      >    
       
+      
+             <div class="app-container">
+        <a
+          class="app-icon"
+          href="    https://docs.google.com/spreadsheets/d/1TMSoixoLG4gasRmWjleN5Q94WYxFHXW1dibCXBsXh5c/edit?gid=0#gid=0"
+          target="_blank"
+        >
+          <img
+            src="https://cdn.glitch.global/03e6a85d-c0f8-4b7b-8830-9670b80d0c85/184fa8e8-9e76-42fc-b59a-d0b37052f335.image.png?v=1749369903084"
+          />
+        </a>
+        <span class="app-label">Ngaji</span>
+      </div>
       
       <div class="app-container">
         <a
@@ -205,8 +277,43 @@ h1 {
         </a>
         <span class="app-label">Assyamsi</span>
       </div>
-
       
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="intent://send/6281234567890#Intent;package=com.whatsapp.w4b;scheme=smsto;end"
+          target="_blank"
+        >
+          <img
+            src="https://ipa.ameer.app/storage/A43BE4FB4ADC9EBSQP/18364/512x512bb.jpg"
+            alt="WA Business"
+          />
+        </a>
+        <span class="app-label">Whatsapp</span>
+        
+      </div>
+
+       <div class="app-container">
+        <a class="app-icon"  href="intent:#Intent;package=com.bca.mybca.omni.android;end" target="_blank">
+          <img
+            src="https://play-lh.googleusercontent.com/ckrnc0pzN0oZgSaMQMnOYrICdBLwFTuI17MlTUp9ftyZPJ-m4K1pA3_Dz1B-1dCFVZbv"
+            alt="WhatsApp"
+          />
+        </a>
+        <span class="app-label">BCA</span>
+      </div>
+
+          
+      
+ <div class="app-container">
+        <a class="app-icon"  href="intent:#Intent;package=com.gojek.gopay;end" target="_blank">
+          <img
+            src="https://play-lh.googleusercontent.com/AdojfiKumvRSrBipGmdwyu3I0vbBHzTGba4fvhufJx-t2YBhBKfcLlZyT1X1gvbO2A=s96-rw"
+            alt="WhatsApp"
+          />
+        </a>
+        <span class="app-label">Gopay</span>
+      </div>
    
        <div class="app-container">
         <a
@@ -225,7 +332,7 @@ h1 {
         <a
           class="app-icon"
           target="_blank"
-          href="intent:#Intent;package=com.bankbsi.mobile;end"
+          href="intent:#Intent;package=co.id.bankbsi.superapp;end"
         >
           <img
             src="https://play-lh.googleusercontent.com/37LouKJTsdX7DS28yN9LymTRIMmct9OATRPJrravKoSYKOCd6S6G3obfX_HQPm0pr54"
@@ -260,6 +367,20 @@ h1 {
         </a>
         <span class="app-label">Jago</span>
       </div>
+      
+      
+       <div class="app-container">
+        <a class="app-icon"  href="intent:#Intent;package=id.dana;end" target="_blank">
+          <img
+            src="https://play-lh.googleusercontent.com/pqoyI2JaPd3uOYt-5GzVqi82OvhBC9Jf-EPQqPDhCbyekdKZe5r-hOGlF4qE1ddWe3o=s96-rw"
+            alt="WhatsApp"
+          />
+        </a>
+        <span class="app-label">Dana</span>
+      </div>
+      
+      
+      
    <div class="app-container">
         <a
           class="app-icon"
@@ -275,7 +396,7 @@ h1 {
       </div>
       
       
-            <div class="app-container">
+            <!--<div class="app-container">
         <a
           class="app-icon"
           href="https://shopee.co.id/universal-link"
@@ -287,7 +408,7 @@ h1 {
           />
         </a>
         <span class="app-label">Shopee</span>
-      </div>
+      </div>-->
       
       <div class="app-container">
         <a
@@ -338,20 +459,9 @@ h1 {
             src="https://img.utdstc.com/icon/97b/3a3/97b3a3d5a3faa0aa906b1e91b73655521fb392d8ceef56b52dce05dc235b9e87:200"
           />
         </a>
-        <span class="app-label">File</span>
+        <span class="app-label">File </span>
       </div>
-      <div class="app-container">
-        <a
-          class="app-icon"
-          target="_blank"
-          href="intent:#Intent;package=pl.solidexplorer2;end"
-        >
-          <img
-            src="https://img.utdstc.com/icon/97b/3a3/97b3a3d5a3faa0aa906b1e91b73655521fb392d8ceef56b52dce05dc235b9e87:200"
-          />
-        </a>
-        <span class="app-label">File Solid</span>
-      </div>
+
 
       <div class="app-container">
         <a
@@ -465,7 +575,7 @@ h1 {
       <div class="app-container">
         <a
           class="app-icon"
-          href="https://seller-id.tokopedia.com/finance/withdraw-new"
+          href="intent:#Intent;package=com.tiktokshop.seller;end"
           target="_blank"
         >
           <img
@@ -477,21 +587,7 @@ h1 {
       
       </div>
       
-      <div class="app-container">
-        <a
-          class="app-icon"
-          href="intent://send/6281234567890#Intent;package=com.whatsapp.w4b;scheme=smsto;end"
-          target="_blank"
-        >
-          <img
-            src="https://ipa.ameer.app/storage/A43BE4FB4ADC9EBSQP/18364/512x512bb.jpg"
-            alt="WA Business"
-          />
-        </a>
-        <span class="app-label">Whatsapp</span>
-        
-        
-      </div>
+      
       <div class="app-container">
         <a class="app-icon" href="tg://resolve" target="_blank">
           <img
@@ -539,8 +635,38 @@ h1 {
         </a>
         <span class="app-label">Calendar</span>
       </div>
+      
+      
+              <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://www.online-stopwatch.com/sensory-timers/circle/full-screen/#"
+          target="_blank"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdMRLUZ2g0EwdSpjXmLZDY_X2OHYj30jCsMw&s"
+          />
+        </a>
+        <span class="app-label">Timer</span>
+      </div>
+      
+          <div class="app-container">
+        <a
+          class="app-icon"
+          href="intent:#Intent;package=com.lastpass.lpandroid;end"
+          target="_blank"
+        >
+          <img
+            src="https://images.icon-icons.com/2699/PNG/512/lastpass_tile_logo_icon_168330.png"
+          />
+        </a>
+        <span class="app-label">Last</span>
+      </div>
+    
+      
+      
 
-      <div class="app-container">
+     <!-- <div class="app-container">
         <a
           class="app-icon"
           href="https://www.bigseller.com/web/order/index.htm?status=processing"
@@ -564,37 +690,12 @@ h1 {
           />
         </a>
         <span class="app-label">Tasbih</span>
-      </div>
+      </div>-->
         
         
-              <div class="app-container">
-        <a
-          class="app-icon"
-          href="https://www.online-stopwatch.com/sensory-timers/circle/full-screen/#"
-          target="_blank"
-        >
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdMRLUZ2g0EwdSpjXmLZDY_X2OHYj30jCsMw&s"
-          />
-        </a>
-        <span class="app-label">Timer</span>
-      </div>
       
-    
-             <div class="app-container">
-        <a
-          class="app-icon"
-          href="    https://docs.google.com/spreadsheets/d/1TMSoixoLG4gasRmWjleN5Q94WYxFHXW1dibCXBsXh5c/edit?gid=0#gid=0"
-          target="_blank"
-        >
-          <img
-            src="https://cdn.glitch.global/03e6a85d-c0f8-4b7b-8830-9670b80d0c85/184fa8e8-9e76-42fc-b59a-d0b37052f335.image.png?v=1749369903084"
-          />
-        </a>
-        <span class="app-label">Ngaji</span>
-      </div>
       
-             <div class="app-container">
+             <!--<div class="app-container">
         <a
           class="app-icon"
           href="    https://canva.com"
@@ -605,36 +706,65 @@ h1 {
           />
         </a>
         <span class="app-label">Canva</span>
-      </div>
-      
-      <div class="app-container">
-        <a
-          class="app-icon"
-          href="    https://lastpass.com"
-          target="_blank"
-        >
-          <img
-            src="https://images.icon-icons.com/2699/PNG/512/lastpass_tile_logo_icon_168330.png"
-          />
-        </a>
-        <span class="app-label">Last</span>
-      </div>
-    
-      <div class="app-container">
-        <a
-          class="app-icon"
-          href="intent:#Intent;package=com.macrovideo.v380pro;end"
-          target="_blank"
-        >
-          <img
-            src="https://img.utdstc.com/icon/417/850/4178509fc47218027c4c2956237e9f0b7e0b72346ffc62c1dc961ff88b344c19:200"
-          />
-        </a>
-        <span class="app-label">CCTV</span></div
-      >      
+      </div>-->
       
 
+        
       
+
+  <script>
+  const quoteBox = document.getElementById("quote-box");
+  let quotes = [];
+  let jadwal = [];
+
+  // Ambil quotes dari file quotes.txt
+  fetch("quotes.txt")
+    .then(res => res.text())
+    .then(text => {
+      quotes = text.split('\n').filter(q => q.trim() !== "");
+    });
+
+  // Ambil jadwal dari file jadwal.txt
+  fetch("jadwal.txt")
+    .then(res => res.text())
+    .then(text => {
+      jadwal = text
+        .split('\n')
+        .map(line => line.trim())
+        .filter(line => line !== '');
+      updateMessage();
+      setInterval(updateMessage, 5000);
+    })
+    .catch(() => {
+      quoteBox.textContent = "Gagal memuat jadwal";
+    });
+
+  function updateMessage() {
+    const now = new Date();
+    const dayNames = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+    const today = dayNames[now.getDay()];
+    const timeNow = now.getHours().toString().padStart(2, "0") + ":" + now.getMinutes().toString().padStart(2, "0");
+
+    const match = jadwal.find(line => {
+      const [hari, rentang, teks] = line.split("|");
+      const [mulai, selesai] = rentang.split("-");
+      const isHariCocok = hari === today || hari === "Harian";
+      return isHariCocok && timeNow >= mulai && timeNow <= selesai;
+    });
+
+    if (match) {
+      const [, , teks] = match.split("|");
+      quoteBox.textContent = teks;
+    } else {
+      if (quotes.length > 0) {
+        const random = Math.floor(Math.random() * quotes.length);
+        quoteBox.textContent = quotes[random];
+      } else {
+        quoteBox.textContent = "Semangat hari ini! ✨";
+      }
+    }
+  }
+</script>
 
  
 
@@ -669,7 +799,7 @@ h1 {
       a.remove();
     }
   });
-</script>     
+</script>    
       
       
       
