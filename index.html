@@ -103,7 +103,7 @@ h1 {
     left: 0;
     height: 4px;
     background: #8fce00;
-    animation: progressBar 5s linear infinite;
+    animation: progressBar 10s linear infinite;
   }
 
   @keyframes progressBar {
@@ -131,7 +131,7 @@ h1 {
     
     <div class="quote-container">
   <div class="quote-progress"></div>
-  <div id="quote-box" class="quote-box">Alhamdulillah ðŸ¤²</div>
+  <div id="quote-box" class="quote-box">Alhamdulillah 🤲</div>
 </div>
 
     
@@ -750,7 +750,7 @@ h1 {
         .map(line => line.trim())
         .filter(line => line !== '');
       updateMessage();
-      setInterval(updateMessage, 5000);
+      setInterval(updateMessage, 10000);
     })
     .catch(() => {
       quoteBox.textContent = "Gagal memuat jadwal";
@@ -777,7 +777,7 @@ h1 {
         const random = Math.floor(Math.random() * quotes.length);
         quoteBox.textContent = quotes[random];
       } else {
-        quoteBox.textContent = "Semangat hari ini! âœ¨";
+        quoteBox.textContent = "Semangat hari ini! ✨";
       }
     }
   }
