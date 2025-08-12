@@ -733,8 +733,16 @@ h1 {
 <!-- Pencarian Google Play di bawah halaman -->
 <div style="position: fixed; bottom: 10px; width: 100%; text-align: center;">
   <form onsubmit="searchPlayStore(event)" style="display: inline-block;">
-    <input type="text" id="playSearch" placeholder="Cari di Google Play..." style="padding: 6px 12px; border-radius: 8px; border: 1px solid #ccc; width: 200px;">
-    <button type="submit" style="padding: 6px 12px; border-radius: 8px; background-color: #4285F4; color: white; border: none;">Cari</button>
+    <input type="text" id="playSearch" placeholder="Cari di Google Play..." 
+           style="padding: 6px 12px; border-radius: 8px; border: 1px solid #ccc; width: 200px;">
+    <button type="submit" 
+            style="padding: 6px 12px; border-radius: 8px; background-color: #4285F4; color: white; border: none; margin-left: 4px;">
+      Cari
+    </button>
+    <button type="button" onclick="clearSearch()" 
+            style="padding: 6px 12px; border-radius: 8px; background-color: #e74c3c; color: white; border: none; margin-left: 4px;">
+      ❌
+    </button>
   </form>
 </div>
 
@@ -746,6 +754,11 @@ h1 {
       const url = `https://play.google.com/store/search?q=${encodeURIComponent(query)}&c=apps`;
       window.open(url, '_blank');
     }
+  }
+
+  function clearSearch() {
+    document.getElementById('playSearch').value = '';
+    document.getElementById('playSearch').focus();
   }
 </script>
 
