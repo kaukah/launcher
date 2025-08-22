@@ -31,7 +31,7 @@ h1 {
   max-width: 100%;
   box-sizing: border-box;
   place-items: center;
-  margin-top:30px;
+  margin-top:50px;
 }
 
 
@@ -122,6 +122,37 @@ h1 {
     /*box-shadow: 0 2px 6px rgba(0,0,0,0.1);*/
   }
 
+.group-popup {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(5px);
+}
+
+.group-content {
+  background: #111;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  color: white;
+  animation: slideUp 0.3s ease;
+}
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
 
 </style>
   </head>
@@ -131,15 +162,187 @@ h1 {
     
     <div class="quote-container">
   <div class="quote-progress"></div>
-  <div id="quote-box" class="quote-box">Alhamdulillah ðŸ¤²</div>
+  <div id="quote-box" class="quote-box">Alhamdulillah 🤲</div>
 </div>
 
     
     
     <div class="grid">
+
+
+
+
+<!-- Tombol Holder -->
+<div class="app-container">
+  <div class="app-icon" onclick="openGroup('docGroup')">
+    <img src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"/>
+  </div>
+  <span class="app-label">Docs</span>
+</div>
+
+<!-- Popup Group -->
+<div id="docGroup" class="group-popup">
+  <div class="group-content">
+    <span class="close-btn" onclick="closeGroup('docGroup')">&times;</span>
+    <h2>Google Docs</h2>
+    <div class="grid">
+
       
-     
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/document/d/1GGTdAKtuYsFbZKYmSH8Wmj_nGBzYWZsDRrt8ua56ZxY/"
+          target="_blank"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Pagi Basy</span>
+      </div>
+
+    <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/document/d/1tJyhS_3wQqBty9jmENwYCktFThCq0sost7wFODut-SA"
+          target="_blank"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Sore Syam</span>
+      </div>
+
       
+           <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://kaukah.github.io/tasbih/"
+          target="_blank"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Tasbih</span>
+      </div>
+
+
+    <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/document/d/1tJyhS_3wQqBty9jmENwYCktFThCq0sost7wFODut-SA"
+          target="_blank"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Docs</span>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Tombol Holder -->
+<div class="app-container">
+  <div class="app-icon" onclick="openGroup('sheetGroup')">
+    <img src="https://img.icons8.com/color/96/google-sheets.png"/>
+  </div>
+  <span class="app-label">Sheet</span>
+</div>
+
+<!-- Popup Group -->
+<div id="sheetGroup" class="group-popup">
+  <div class="group-content">
+    <span class="close-btn" onclick="closeGroup('sheetGroup')">&times;</span>
+    <h2>Google Sheet</h2>
+    <div class="grid">
+
+
+             <div class="app-container">
+        <a
+          class="app-icon"
+          href="    https://docs.google.com/spreadsheets/d/1TMSoixoLG4gasRmWjleN5Q94WYxFHXW1dibCXBsXh5c/edit?gid=0#gid=0"
+          target="_blank"
+        >
+          <img
+            src="https://cdn.glitch.global/03e6a85d-c0f8-4b7b-8830-9670b80d0c85/184fa8e8-9e76-42fc-b59a-d0b37052f335.image.png?v=1749369903084"
+          />
+        </a>
+        <span class="app-label">Ngaji</span>
+      </div>
+      
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/spreadsheets/d/1VTyow5eg-kMIB9XhqajobPCiynYzD-DWlXxWZLCteDU/"
+          target="_blank"
+        >
+          <img
+            src="https://img.icons8.com/color/96/google-sheets.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Todolist</span>
+      </div>
+
+      <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/spreadsheets/d/1YMK8SJH6ytmdoauQEkTmzOQP-RZqjC8IVddRu4AwJ8s"
+          target="_blank"
+        >
+          <img
+            src="https://img.icons8.com/color/96/google-sheets.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Stok</span>
+      </div>
+            <div class="app-container">
+        <a
+          class="app-icon"
+          href="https://docs.google.com/spreadsheets/"
+          target="_blank"
+        >
+          <img
+            src="https://img.icons8.com/color/96/google-sheets.png"
+            alt="Sheets"
+          />
+        </a>
+        <span class="app-label">Sheet</span>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 
       <div class="app-container">
         <a class="app-icon" href="tiktok://home" target="_blank">
@@ -194,93 +397,7 @@ h1 {
         </a>
         <span class="app-label">CCTV</span></div
       >    
-      
-      
-             <div class="app-container">
-        <a
-          class="app-icon"
-          href="    https://docs.google.com/spreadsheets/d/1TMSoixoLG4gasRmWjleN5Q94WYxFHXW1dibCXBsXh5c/edit?gid=0#gid=0"
-          target="_blank"
-        >
-          <img
-            src="https://cdn.glitch.global/03e6a85d-c0f8-4b7b-8830-9670b80d0c85/184fa8e8-9e76-42fc-b59a-d0b37052f335.image.png?v=1749369903084"
-          />
-        </a>
-        <span class="app-label">Ngaji</span>
-      </div>
-      
-      <div class="app-container">
-        <a
-          class="app-icon"
-          href="https://docs.google.com/spreadsheets/d/1VTyow5eg-kMIB9XhqajobPCiynYzD-DWlXxWZLCteDU/"
-          target="_blank"
-        >
-          <img
-            src="https://img.icons8.com/color/96/google-sheets.png"
-            alt="Sheets"
-          />
-        </a>
-        <span class="app-label">Todolist</span>
-      </div>
 
-      <div class="app-container">
-        <a
-          class="app-icon"
-          href="https://docs.google.com/spreadsheets/d/1YMK8SJH6ytmdoauQEkTmzOQP-RZqjC8IVddRu4AwJ8s"
-          target="_blank"
-        >
-          <img
-            src="https://img.icons8.com/color/96/google-sheets.png"
-            alt="Sheets"
-          />
-        </a>
-        <span class="app-label">Stok</span>
-      </div>
-
-
-      
-      <div class="app-container">
-        <a
-          class="app-icon"
-          href="https://docs.google.com/document/d/1GGTdAKtuYsFbZKYmSH8Wmj_nGBzYWZsDRrt8ua56ZxY/"
-          target="_blank"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"
-            alt="Sheets"
-          />
-        </a>
-        <span class="app-label">Pagi Bas</span>
-      </div>
-
-    <div class="app-container">
-        <a
-          class="app-icon"
-          href="https://docs.google.com/document/d/1tJyhS_3wQqBty9jmENwYCktFThCq0sost7wFODut-SA"
-          target="_blank"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"
-            alt="Sheets"
-          />
-        </a>
-        <span class="app-label">Syams</span>
-      </div>
-
-      
-           <div class="app-container">
-        <a
-          class="app-icon"
-          href="https://kaukah.github.io/tasbih/"
-          target="_blank"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/256/5968/5968517.png"
-            alt="Sheets"
-          />
-        </a>
-        <span class="app-label">Sore</span>
-      </div>
       
       <div class="app-container">
         <a
@@ -490,7 +607,7 @@ h1 {
         <span class="app-label">LocalSend</span>
       </div>
 
-      <div class="app-container">
+      <!--<div class="app-container">
         <a
           class="app-icon"
           target="_blank"
@@ -501,7 +618,11 @@ h1 {
           />
         </a>
         <span class="app-label">Kereta</span>
-      </div>
+      </div>-->
+      
+      
+      
+      
       <div class="app-container">
         <a class="app-icon" href="gojek://home" target="_blank">
           <img
@@ -684,19 +805,7 @@ h1 {
         <span class="app-label">Last</span>
       </div>
       
-            <div class="app-container">
-        <a
-          class="app-icon"
-          href="https://docs.google.com/spreadsheets/"
-          target="_blank"
-        >
-          <img
-            src="https://img.icons8.com/color/96/google-sheets.png"
-            alt="Sheets"
-          />
-        </a>
-        <span class="app-label">Sheet</span>
-      </div>
+
       
      <!-- <div class="app-container">
         <a
@@ -870,5 +979,29 @@ h1 {
       
       
     </div>
+    
+    
+    
+<script>
+function openGroup(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeGroup(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+// Tambahkan: klik di luar konten juga menutup popup
+window.addEventListener("click", function(e) {
+  const popups = document.querySelectorAll(".group-popup");
+  popups.forEach(popup => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+});
+</script>
+
+
   </body>
 </html>
